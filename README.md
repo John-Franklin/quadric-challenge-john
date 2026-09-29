@@ -86,7 +86,7 @@ AI was used to accelerate development across the project. All code has been revi
 
 - **Manual Pi implementation:** Pi is calculated with a manual implementation (Machin's formula) rather than a library call so that the computation can be cancelled mid-run.
 - **No direct caching:** With the periodic page refreshes so frequently caching isn't practical and would be more trouble than it's worth.
-- **live loading and infinite scroll multiloading:** implementing both live updates for jobs and infinite scroll means that many pages are loaded periodically to handle that behavior.
+- **Live loading and infinite scroll multiloading:** implementing both live updates for jobs and infinite scroll means that many pages are loaded periodically to handle that behavior.
 
 ## 5. Next Steps
 
@@ -99,4 +99,4 @@ AI was used to accelerate development across the project. All code has been revi
 - **Paid and unpaid tiers**
 - **Websocket Notifications:** Use Websockets to pass through job updates to the job list view and provide notifications when your job has completed, hopefully reducing DB hits a bit.
 - **Sandbox for the python call:** This is fine for local runs but the python call needs to be sandboxed or deprivileged so that there can't be any security vulnerabilities from executing from a privileged context.
-- **code syntax highlighting for the python box**
+- **Code syntax highlighting for the python box**
