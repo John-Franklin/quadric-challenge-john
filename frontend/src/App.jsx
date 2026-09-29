@@ -6,13 +6,15 @@ import CreateJob from './pages/CreateJob'
 function App() {
   return (
     <BrowserRouter>
-      <Navigation />
-      <div style={{ padding: '1rem' }}>
-        <Routes>
-          <Route path="/" element={<Navigate to="/jobs" replace />} />
-          <Route path="/jobs" element={<JobsList />} />
-          <Route path="/create" element={<CreateJob />} />
-        </Routes>
+      <div className="container">
+        <Navigation />
+        <main className="content">
+          <Routes>
+            <Route path="/" element={<Navigate to="/jobs" replace />} />
+            <Route path="/jobs" element={<JobsList />} />
+            <Route path="/create" element={<CreateJob />} />
+          </Routes>
+        </main>
       </div>
     </BrowserRouter>
   )
