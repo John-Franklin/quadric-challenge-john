@@ -1,18 +1,18 @@
 package handlers
 
 import (
-	"backend/models"
-	"encoding/json"
 	"net/http"
 	"strings"
+
+	"backend/models"
 )
 
+// RunnerHandler registers a runner, or refreshes it if it is already known.
 func (h *Handlers) RunnerHandler(w http.ResponseWriter, r *http.Request) {
 	var req struct {
 		ID string `json:"id"`
 	}
-	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
-		writeError(w, http.StatusBadRequest, "invalid JSON body")
+	if !decodeJSON(w, r, &req) {
 		return
 	}
 	runner := models.Runner{ID: strings.TrimSpace(req.ID)}

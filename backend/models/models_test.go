@@ -12,6 +12,9 @@ func TestTerminalStatus(t *testing.T) {
 		"ERROR: calculation failed: overflow\n":           StatusFailed,
 		"Word 9: x\nLorem Ipsum generation completed\n":   StatusCompleted,
 		"PI calculation completed\nERROR: late failure\n": StatusFailed,
+		"| ERROR: printed by a script\n":                  "",
+		"| script completed\n":                            "",
+		"| step completed\nPython script completed\n":     StatusCompleted,
 	}
 	for input, want := range tests {
 		if got := terminalStatus(input); got != want {

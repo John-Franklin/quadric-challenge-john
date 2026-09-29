@@ -6,6 +6,7 @@ const STATUS_COLORS = {
   running: { bgcolor: '#cfe2ff', color: '#084298' },
   completed: { bgcolor: '#d1e7dd', color: '#0f5132' },
   failed: { bgcolor: '#f8d7da', color: '#842029' },
+  cancelled: { bgcolor: '#e2e3e5', color: '#41464b' },
 }
 
 function StatusBadge({ status }) {

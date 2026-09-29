@@ -1,12 +1,13 @@
+// Package db connects to PostgreSQL and applies the schema.
 package db
 
 import (
 	"context"
 	"database/sql"
-	_ "embed"
+	_ "embed" // for go:embed
 	"os"
 
-	_ "github.com/jackc/pgx/v5/stdlib"
+	_ "github.com/jackc/pgx/v5/stdlib" // registers the "pgx" database/sql driver
 )
 
 const defaultDSN = "postgres://jobsuser:jobspass@localhost:5432/jobsdb?sslmode=disable"
